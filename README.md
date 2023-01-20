@@ -3,4 +3,4 @@ Lisp interpretor in Haskell.
 
 This was a University assignement.
 
-## Grade A+
+__Grade: A+__
