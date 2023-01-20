@@ -1,0 +1,7 @@
+;;; Jaydan Aladro (20152077), David Telles (75030101)            -*- mode: lisp-data; coding: utf-8 -*-
+
+(call * (call - 2 4) (hastype 6 Int))                                                                   ; ↝ -12 : Lint
+(hastype (if (let (x 3) (y 6) (call >= x y)) 0 (fetch (tuple 8 9) (x y) (call + x y))) Int)             ; ↝ 17 : Lint
+(tuple (tuple (call = 1 1) (hastype (call = 1 2) Bool)) 12)                                             ; ↝ [[True False] 12] : Ltup [Ltup [Lboo,Lboo],Lint]
+(let (x 2) (y Int 3) (let (z 4) (call + (call * x y) z)))                                               ; ↝ 10 : Lint
+(call (hastype (fun x (fun y (if (call = x y) (call = 1 1) (call = 1 2)))) (Int -> (Int -> Bool))) 1 2) ; ↝ False : Lboo
